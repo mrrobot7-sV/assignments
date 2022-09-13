@@ -1,37 +1,26 @@
 # Print met de volgende lijst en indexering de zin "Hallo, ik ben [naam] en ik zit bij Hacklab"
 
+'''
+Print as follows:
+
+letterList[0].upper()
+letterList[6]
+letterList[3]
+...
+
+Index per letter:
+q:0, w:1, e:2, r:3, t:4, y:5, u:6, i:7, o:8, p:9, l:10, k:11, j:12, h:13, g:14, f:15, d:16, s:17, a:18, z:19, x:20, c:21, v:22, b:23, n:24, m:25
+
+'''
 letterList = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i' , 'o', 'p', 'l', 'k', 'j', 'h', 'g', 'f', 'd', 's', 'a', 'z', 'x', 'c', 'v', 'b', 'n', 'm']
-
-'''
-    Usage: 
-
-        1)  print_sentence() 
-            prints the sentence according to the indexes that are found in 'letterList'.
-        2)  print_sentence(False)
-            prints the characters from the sentence when found in the 'letterList', otherwise continues to print the character 
-            even if not found in 'letterList'.    
-'''
-
-name = "Pieter"
-sentence = "Hallo, ik ben {fname} en ik zit bij Hacklab".format(fname =name)
-
-def print_sentence(equalToIndex = True):
-    result = ''
-    for c in sentence:    
-        if (equalToIndex):
-            try:
-                index = letterList.index(c)
-            except ValueError as e:
-                print(e)
-                continue                
-            result += letterList[index]
-        else:
-            if c.isupper() or c == ' ' or c == ',':
-                result += c
-            else:
-                index = letterList.index(c)
-                result += letterList[index]        
-    return result
-
-print(print_sentence()) # this means that you can't fully print the sentence as letterList doesn't include: ' ', ',', 'H', and 'P'
-print(print_sentence(False))
+str1 = letterList[13].upper() + letterList[18] + letterList[10] + letterList[10] + letterList[8] + ', '
+str2 = letterList[7] + letterList[11] + ' '
+str3 = letterList[23] + letterList[2] + letterList[24] + ' '
+str4 = letterList[9].upper() + letterList[7] + letterList[2] + letterList[4] + letterList[2] + letterList[3] + ' '
+str5 = letterList[2] + letterList[24] + ' '
+str6 = letterList[7] + letterList[11] + ' '
+str7 = letterList[19] + letterList[7] + letterList[4] + ' '
+str8 = letterList[23] + letterList[7] + letterList[12] + ' '
+str9 = letterList[13].upper() + letterList[18] + letterList[21] + letterList[11] + letterList[10] + letterList[18] + letterList[23] + ' '
+sentence = str1 + str2 + str3 + str4 + str5 + str6 + str7 + str8 + str9
+print(sentence)

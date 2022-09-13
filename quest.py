@@ -14,7 +14,12 @@ import json
 
 jstr = json.dumps(quest)
 
-index = jstr.find("Het antwoord")
-if index != -1:
-    path = jstr[0:index]
-    print(f"Path: {path}")
+def search_str(str):
+    index = jstr.find(str)
+    if index != -1:
+        return jstr[0:index+len(str)]
+    return print(f"Could not find {str}")
+
+sstr = "Het antwoord"        
+path = search_str(sstr)
+print(f"Path to '{sstr}' = {path}\n")

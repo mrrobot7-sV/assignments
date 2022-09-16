@@ -8,18 +8,23 @@ te houden (Dus makkelijk aan te passen)
 @@@
 @@@@
 @@@@@
-@@@@@@
+@@@@@@  # ARROW_SIZE = 6
 @@@@@
 @@@@
 @@@
 @@
 @
+
+NOTE: The arrow size in my implementation is the size of the 
+middle part of the arrow; in the implementation of ..., 
+the 'arrow length' is divided in 2 and so making the result
+half of what I expected.
 '''
 # -- no string slice
 # -- no function
 # -- inside 1 loop
 
-ARROW_SIZE = 12 # size of arrow
+ARROW_SIZE = 6 # size of arrow
 
 symbolNum = 1
 printBackwards = False

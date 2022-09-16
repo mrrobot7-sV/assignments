@@ -8,7 +8,11 @@ te houden (Dus makkelijk aan te passen)
 @@@
 @@@@
 @@@@@
+<<<<<<< HEAD
 @@@@@@  # ARROW_SIZE = 6
+=======
+@@@@@@  #ARROW_SIZE = 6
+>>>>>>> 5f8491086df368bfa792085a519e11ef52b2879d
 @@@@@
 @@@@
 @@@
@@ -16,7 +20,11 @@ te houden (Dus makkelijk aan te passen)
 @
 
 NOTE: The arrow size in my implementation is the size of the 
+<<<<<<< HEAD
 middle part of the arrow; in the implementation of ..., 
+=======
+middle part of the arrow; in the implementation of Martin, 
+>>>>>>> 5f8491086df368bfa792085a519e11ef52b2879d
 the 'arrow length' is divided in 2 and so making the result
 half of what I expected.
 '''

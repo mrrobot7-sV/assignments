@@ -18,11 +18,18 @@ import random
 
 # Generate random binary string and use List Comprehension
 # to count the 1's and 0's and return as a Tuple.
+# def coin_flip(c):
+#     bs = '' 
+#     for i in range(0, c):
+#         bs += random.choice(["0","1"])
+#     return len([x for x in bs if "0" in x]), len([y for y in bs if "1" in y])
+
+# Generate random binary string using a Generator with 
+# Generator Expression, using List Comprehension to 
+# to count the 1's and 0's and return as a Tuple.
 def coin_flip(c):
-    bs = '' 
-    for i in range(0, c):
-        bs += random.choice(["0","1"])
-    return len([x for x in bs if "0" in x]), len([y for y in bs if "1" in y])
+    bs = ''.join(random.choice(['0','1']) for i in range(c))
+    return len([x for x in bs if '0' in x]), len([y for y in bs if '1' in y])
 
 cf = coin_flip(5)
 print('Heads: {0[0]}, Tails: {0[1]}'.format(cf))

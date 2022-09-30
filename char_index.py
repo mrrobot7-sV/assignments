@@ -21,14 +21,9 @@ Notes
 
 '''
 def char_index(str, c):
-    index2 = str[::-1].find(c)
-    index1 = str.find(c)
-    if (index1 != -1) and (index2 != -1):
-        return [index1, str.rindex(c)]
-    elif (index1 != -1) and (index2 == -1):
-        return [index1, 0]
-    elif (index1 != -1) and (index2 == -1):
-        return [0, str.rindex(c)]
+    if (str.count(c) >= 1):
+        # return first and second index
+        return [str.find(c), str.rindex(c)] 
     return None
     
 print(char_index("hello", "l")) # [2, 3]
